@@ -1,0 +1,31 @@
+﻿@model EmployeeWeb.Models.EmployeeView
+
+<h2>Update Employee</h2>
+
+<form method="post">
+    <div>
+        <label for="Name">Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label for="Gender">Gender</label>
+        <input asp-for="Gender" />
+    </div>
+    <div>
+        <label for="Mobile">Mobile</label>
+        <input asp-for="Mobile" />
+    </div>
+    <div>
+        <label for="Email">Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input asp-for="Password" />
+    </div>
+    <div>
+        <label for="DateOfBirth">Date of Birth</label>
+        <input asp-for="DateOfBirth" type="date" />
+    </div>
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EmployeeWeb.Models.EmployeeView>
+
+<h1>Employee List</h1>
+<a asp-action="Create" class="btn-back">Create New Employee</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@employee.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@employee.Id">Edit</a> |
+                    <a asp-action="Delete"
+                       asp-route-id="@employee.Id"
+                       onclick="return confirm('Are you sure you want to delete this employee?');">Delete</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

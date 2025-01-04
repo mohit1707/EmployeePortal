@@ -1,0 +1,103 @@
+﻿@model EmployeeWeb.Models.EmployeeView
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .details-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-item {
+            margin-bottom: 20px;
+        }
+
+            .details-item label {
+                font-weight: bold;
+                color: #555;
+                display: block;
+            }
+
+            .details-item span {
+                font-size: 16px;
+                color: #333;
+            }
+
+        .btn-back {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+            .btn-back:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <h1>Employee Details</h1>
+        <div class="details-item">
+            <label>ID:</label>
+            <span>@Model.Id</span>
+        </div>
+        <div class="details-item">
+            <label>Name:</label>
+            <span>@Model.Name</span>
+        </div>
+        <div class="details-item">
+            <label>Email:</label>
+            <span>@Model.Email</span>
+        </div>
+        <div class="details-item">
+            <label>Gender:</label>
+            <span>@Model.Gender</span>
+        </div>
+        <div class="details-item">
+            <label>Mobile:</label>
+            <span>@Model.Mobile</span>
+        </div>
+        <div class="details-item">
+            <label>Date of Birth:</label>
+            <span>@Model.DateOfBirth.ToString("yyyy-MM-dd")</span>
+        </div>
+        <div class="details-item">
+            <label>Password:</label>
+            <span>@Model.Password</span>
+        </div>
+        <a asp-action="Index" class="btn-back">Back to List</a>
+    </div>
+</body>
+</html>
